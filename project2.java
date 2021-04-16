@@ -33,6 +33,8 @@ public class project2 {
     Scanner input = new Scanner(System.in);
     String encrypt=input.nextLine();
     encrypt=encrypt.toLowerCase();
+    if(encrypt.length()%2==0)
+      encrypt+="qq";
     String selected = "";
     for(int i=0;i<encrypt.length();i++)
     {
@@ -44,7 +46,7 @@ public class project2 {
           selected=encrypt.substring(i,j+1);
           if(valid(wordlist, selected))
           {
-            System.out.println(selected);
+            System.out.print(selected+" ");
             i=j;
             break;        
           }
@@ -57,7 +59,7 @@ public class project2 {
           selected=encrypt.substring(i,j+1);
           if(valid(wordlist, selected))
             {
-              System.out.println(selected);
+              System.out.print(selected+" ");
               i=j;
               break;        
             }
